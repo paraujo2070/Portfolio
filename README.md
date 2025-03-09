@@ -1,2 +1,2 @@
-# Portifolio
+# Portfólio
 portfólio Pedro Araújo

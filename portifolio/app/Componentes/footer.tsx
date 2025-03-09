@@ -27,7 +27,7 @@ function ArrowIcon() {
               href="https://github.com/paraujo2070"
             >
               <ArrowIcon />
-              <p className="ml-2 h-7">github</p>
+              <p className="ml-2 h-7">GitHub</p>
             </a>
           </li>
           <li>

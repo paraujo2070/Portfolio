@@ -5,10 +5,10 @@ const navItems = {
         name: 'Home',
     },
     '/front': {
-        name: 'Front-End',
+        name: 'Front-end',
     },
-    '/beck': {
-        name: 'Beck-end',
+    '/back': {
+        name: 'Back-end',
     },
     '/mobile':
     {

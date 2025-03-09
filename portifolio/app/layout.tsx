@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portifólio Pedro Araújo",
-  description: "Portifólio de Desenvolvimento de Software.",
+  title: "Portfólio Pedro Araújo",
+  description: "Portfólio de Desenvolvimento de Software.",
   openGraph: {
-    title: 'Portifólio Pedro Araújo',
-    description: 'Portifólio Pedro Araújo',
-    siteName: 'Portifólio',
+    title: 'Portfólio Pedro Araújo',
+    description: 'Portfólio Pedro Araújo',
+    siteName: 'Portfólio',
     locale: 'pt_BR',
     type: 'website',
   }

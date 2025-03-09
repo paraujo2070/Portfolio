@@ -3,10 +3,10 @@ export default function Home() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Portifólio de Pedro Araújo
+        Portfólio de Pedro Araújo
       </h1>
       <p className="mb-4">
-        {`Meu nome é Pedro Araújo, este é meu site portifólio, onde mostro meu trabalho, 
+        {`Meu nome é Pedro Araújo, este é meu site portfólio, onde mostro meu trabalho, 
         com desenvolvimento de software, front-end, back-end e mobile`}
       </p>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">

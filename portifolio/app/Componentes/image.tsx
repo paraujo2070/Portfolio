@@ -48,7 +48,7 @@ export default function Imagem() {
                         src={img5}
                         width={250}
                         height={250}
-                        alt="Picture of the author"
+                        alt="Tela Inicial"
                     />
                 </div>
                 <div className="basis-3xs">
@@ -56,7 +56,7 @@ export default function Imagem() {
                         src={img6}
                         width={250}
                         height={250}
-                        alt="Picture of the author"
+                        alt="Dicas"
                     />
                 </div>
             </div>
