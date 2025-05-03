@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import img1 from '../image/Screenshot_20191212-175256.png';
 import img2 from '../image/Screenshot_20191212-203009.png';
 import img3 from '../image/Screenshot_20191216-183305.png';

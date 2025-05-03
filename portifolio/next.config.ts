@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   images: {
     localPatterns: [
       {
@@ -9,7 +10,7 @@ const nextConfig: NextConfig = {
       },
     ],
     unoptimized: true,
-  },
+  }
 };
 
 export default nextConfig;
