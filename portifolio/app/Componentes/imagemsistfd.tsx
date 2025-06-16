@@ -1,20 +1,18 @@
 "use client";
-
 import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
-import img1 from '../image/Screenshot_20191212-175256.png';
-import img2 from '../image/Screenshot_20191212-203009.png';
-import img3 from '../image/Screenshot_20191216-183305.png';
-import img4 from '../image/Screenshot_20200204-002740.png';
-import img5 from '../image/Screenshot_20200204-002746.png';
-import img6 from '../image/Screenshot_20200204-002936.png';
+import img1 from '../image/Captura_de_tela_de_2025-06-14 18-31-27.png';
+import img2 from '../image/Captura_de_tela_de_2025-06-14 18-31-08.png';
+import img3 from '../image/Captura_de_tela_de_2025-06-14 18-30-43.png';
+import img4 from '../image/Captura_de_tela_de_2025-06-14 18-30-27.png';
+import img5 from '../image/Captura_de_tela_de_2025-06-14 18-30-16.png';
 
 interface ExpandedImageState {
     src: StaticImageData;
     alt: string;
 }
 
-export default function Imagem() {
+export default function ImagemSISTFD() {
     const [expandedImage, setExpandedImage] = useState<ExpandedImageState | null>(null);
 
     const handleImageClick = (imageSrc: StaticImageData, imageAlt: string) => {
@@ -28,68 +26,59 @@ export default function Imagem() {
     return (
         <div>
             <div className="flex flex-row flex-wrap justify-center items-start gap-2 p-2">
-                <div className="cursor-pointer" onClick={() => handleImageClick(img3, "App na play story")}>
+                <div className="cursor-pointer" onClick={() => handleImageClick(img3, "Tela de Pagamento Detalhado")}>
                     <Image
                         src={img3}
                         width={250}
                         height={250}
-                        alt="App na play story"
+                        alt="Tela de Pagamento Detalhado"
                         className="object-contain rounded-md hover:opacity-80 transition-opacity"
                     />
                 </div>
-                <div className="cursor-pointer" onClick={() => handleImageClick(img1, "Tela de Login")}>
+                <div className="cursor-pointer" onClick={() => handleImageClick(img1, "Gerenciar Usuários")}>
                     <Image
                         src={img1}
                         width={250}
                         height={250}
-                        alt="Tela de Login"
+                        alt="Gerenciar Usuários"
                         className="object-contain rounded-md hover:opacity-80 transition-opacity"
                     />
                 </div>
-                <div className="cursor-pointer" onClick={() => handleImageClick(img2, "Tela Inicial")}>
+                <div className="cursor-pointer" onClick={() => handleImageClick(img2, "Tela gerenciar viagens TFD")}>
                     <Image
                         src={img2}
                         width={250}
                         height={250}
-                        alt="Tela Inicial"
+                        alt="Tela gerenciar viagens TFD"
                         className="object-contain rounded-md hover:opacity-80 transition-opacity"
                     />
                 </div>
-                <div className="cursor-pointer" onClick={() => handleImageClick(img4, "Login")}>
+                <div className="cursor-pointer" onClick={() => handleImageClick(img4, "Pagina inicial")}>
                     <Image
                         src={img4}
                         width={250}
                         height={250}
-                        alt="Login"
+                        alt="Pagina inicial"
                         className="object-contain rounded-md hover:opacity-80 transition-opacity"
                     />
                 </div>
-                <div className="cursor-pointer" onClick={() => handleImageClick(img5, "Tela Inicial")}>
+                <div className="cursor-pointer" onClick={() => handleImageClick(img5, "Tela de login")}>
                     <Image
                         src={img5}
                         width={250}
                         height={250}
-                        alt="Tela Inicial"
-                        className="object-contain rounded-md hover:opacity-80 transition-opacity"
-                    />
-                </div>
-                <div className="cursor-pointer" onClick={() => handleImageClick(img6, "Dicas")}>
-                    <Image
-                        src={img6}
-                        width={250}
-                        height={250}
-                        alt="Dicas"
+                        alt="Tela de login"
                         className="object-contain rounded-md hover:opacity-80 transition-opacity"
                     />
                 </div>
             </div>
 
             {expandedImage && (
-                <div
+                <div 
                     className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
                     onClick={handleCloseExpandedImage}
                 >
-                    <div
+                    <div 
                         className="relative max-w-full max-h-full"
                         onClick={(e) => e.stopPropagation()}
                     >

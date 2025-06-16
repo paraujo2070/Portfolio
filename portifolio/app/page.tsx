@@ -27,7 +27,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <Link href="/mobile" className="block bg-white rounded-lg shadow-md overflow-hidden h-full cursor-pointer transform transition-transform duration-300 hover:translate-y-[-5px]">
-              <img src="https://placehold.co/400x200/e0e0e0/333333?text=Sistema+Especialista" alt="Sistema Especialista" className="w-full h-48 object-cover"/>
+              <img src="https://placehold.co/400x200/e0e0e0/333333?text=Planejamento+Financeiro" alt="Sistema Especialista" className="w-full h-48 object-cover"/>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Sistema Especialista para Planejamento Financeiro</h3>
                 <p className="text-gray-700 mb-4">Um sistema para auxiliar no planejamento financeiro familiar, gerando diagnósticos e planos de ação.</p>
@@ -35,16 +35,16 @@ export default function Home() {
             </Link>
 
 
-            <Link href="/back" className="block bg-white rounded-lg shadow-md overflow-hidden h-full cursor-pointer transform transition-transform duration-300 hover:translate-y-[-5px]">
-              <img src="https://placehold.co/400x200/e0e0e0/333333?text=Imagem+Projeto+2" alt="Projeto 2" className="w-full h-48 object-cover"/>
+            <Link href="/front" className="block bg-white rounded-lg shadow-md overflow-hidden h-full cursor-pointer transform transition-transform duration-300 hover:translate-y-[-5px]">
+              <img src="https://placehold.co/400x200/e0e0e0/333333?text=SIS+TFD" alt="Projeto 2" className="w-full h-48 object-cover"/>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Nome do Projeto 2</h3>
-                <p className="text-gray-700 mb-4">Projeto em andamento ...</p>
+                <h3 className="text-xl font-semibold mb-2">SISTFD</h3>
+                <p className="text-gray-700 mb-4">Um sistema para auxiliar o pagamento e processamento de viagens para pacientes com Tratamento Fora de Domicilio.</p>
               </div>
             </Link>
 
-            <Link href="/front" className="block bg-white rounded-lg shadow-md overflow-hidden h-full cursor-pointer transform transition-transform duration-300 hover:translate-y-[-5px]">
-              <img src="https://placehold.co/400x200/e0e0e0/333333?text=Imagem+Projeto+3" alt="Projeto 3" className="w-full h-48 object-cover"/>
+            <Link href="/back" className="block bg-white rounded-lg shadow-md overflow-hidden h-full cursor-pointer transform transition-transform duration-300 hover:translate-y-[-5px]">
+              <img src="https://placehold.co/400x200/e0e0e0/333333?text=Projeto+3" alt="Projeto 3" className="w-full h-48 object-cover"/>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Nome do Projeto 3</h3>
                 <p className="text-gray-700 mb-4">Projeto em andamento ...</p>
