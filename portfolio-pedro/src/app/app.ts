@@ -1,12 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { SobreMim } from './components/sobre-mim/sobre-mim';
+import { Projetos } from './components/projetos/projetos';
+import { Habilidades } from './components/habilidades/habilidades';
+import { Contato } from './components/contato/contato';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [SobreMim, Projetos, Habilidades, Contato],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('portfolio-pedro');
+  title = 'portfolio-pedro';
 }
