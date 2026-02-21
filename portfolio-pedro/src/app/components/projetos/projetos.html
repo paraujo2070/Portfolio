@@ -1,0 +1,89 @@
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  
+  <div class="text-center mb-16">
+    <h2 class="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">Portfólio</h2>
+    <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900">Meus Projetos em Destaque</h3>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    @for (projeto of projetos; track projeto.id) {
+      <div class="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col overflow-hidden group">
+        <div class="p-8 flex-1">
+          <div class="flex justify-between items-start mb-4">
+            <h4 class="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">{{ projeto.titulo }}</h4>
+            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">{{ projeto.categoria }}</span>
+          </div>
+          <p class="text-slate-600 mb-6 text-sm leading-relaxed line-clamp-3">
+            {{ projeto.resumo }}
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            @for (tech of projeto.tecnologias | slice:0:3; track tech) {
+              <span class="text-xs font-semibold bg-slate-50 border border-slate-200 text-slate-600 px-2 py-1 rounded">{{ tech }}</span>
+            }
+            @if (projeto.tecnologias.length > 3) {
+              <span class="text-xs font-semibold bg-slate-50 border border-slate-200 text-slate-600 px-2 py-1 rounded">...</span>
+            }
+          </div>
+        </div>
+        <div class="px-8 py-4 bg-slate-50 border-t border-slate-100">
+          <button (click)="abrirModal(projeto)" class="text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors flex items-center gap-2 cursor-pointer w-full text-left">
+            Ver estudo de caso 
+            <span class="text-lg group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
+      </div>
+    }
+
+  </div>
+</div>
+
+@if (projetoSelecionado) {
+  <div class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm" (click)="fecharModal()">
+    
+    <div class="bg-white w-full max-w-3xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]" (click)="$event.stopPropagation()">
+      
+      <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-start bg-slate-50">
+        <div>
+          <span class="text-blue-600 font-bold text-sm uppercase tracking-wider mb-2 block">{{ projetoSelecionado.categoria }} • {{ projetoSelecionado.data }}</span>
+          <h2 class="text-3xl font-extrabold text-slate-900">{{ projetoSelecionado.titulo }}</h2>
+        </div>
+        <button (click)="fecharModal()" class="text-slate-400 hover:text-red-500 transition-colors p-2 bg-white rounded-full shadow-sm">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <div class="p-8 overflow-y-auto">
+        <div class="space-y-4 mb-8">
+          @for (paragrafo of projetoSelecionado.descricaoCompleta; track $index) {
+            <p class="text-slate-600 leading-relaxed">{{ paragrafo }}</p>
+          }
+        </div>
+
+        <div class="flex flex-wrap gap-4 pt-6 border-t border-slate-100">
+          @if (projetoSelecionado.linkDemo) {
+            <a [href]="projetoSelecionado.linkDemo" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors flex items-center gap-2">
+              Acessar Live Demo
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          }
+          @if (projetoSelecionado.linkRepo) {
+            <a [href]="projetoSelecionado.linkRepo" target="_blank" class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2 px-6 rounded-lg transition-colors flex items-center gap-2">
+              Ver no GitHub
+            </a>
+          }
+        </div>
+        
+        <div class="mt-8">
+          <h4 class="text-sm font-bold text-slate-800 mb-3 uppercase tracking-wider">Stack Tecnológico</h4>
+          <div class="flex flex-wrap gap-2">
+            @for (tech of projetoSelecionado.tecnologias; track tech) {
+              <span class="text-sm font-semibold bg-slate-100 text-slate-700 px-3 py-1 rounded-md">{{ tech }}</span>
+            }
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+}
