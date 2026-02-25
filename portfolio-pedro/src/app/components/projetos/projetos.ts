@@ -41,13 +41,13 @@ export class Projetos {
     },
     {
       id: 'domus',
-      titulo: 'Domus App',
+      titulo: 'Locus Gestão',
       categoria: 'Mobile',
       data: 'fev de 2026 – fev de 2026',
       resumo: 'Aplicativo de gestão imobiliária com arquitetura Local Database offline-first, garantindo a privacidade total dos dados financeiros de pequenos investidores.',
       descricaoCompleta: [
-        'Muitos proprietários de imóveis ainda dependem de planilhas complexas ou cadernos para gerir seus aluguéis. Para resolver isso, criei o Domus, um aplicativo focado na experiência do usuário e na privacidade total dos dados.',
-        'O diferencial do Domus é sua arquitetura Local Database, garantindo que as informações financeiras sensíveis nunca saiam do dispositivo do usuário.',
+        'Muitos proprietários de imóveis ainda dependem de planilhas complexas ou cadernos para gerir seus aluguéis. Para resolver isso, criei o Locus Gestão, um aplicativo focado na experiência do usuário e na privacidade total dos dados.',
+        'O diferencial do locus Gestão é sua arquitetura Local Database, garantindo que as informações financeiras sensíveis nunca saiam do dispositivo do usuário.',
         'Funcionalidades Chave incluem: Painel Financeiro com visão clara de Receita Mensal e Vacância; Controle de Contratos com alertas visuais de vencimento; Módulo de Recibos para geração automática em PDF prontos para envio via WhatsApp; e Backup Portátil com sistema de exportação/importação de dados.',
         'O projeto foi desenvolvido do zero, passando pela modelagem do banco de dados relacional até a implementação de interfaces responsivas e intuitivas.'
       ],
